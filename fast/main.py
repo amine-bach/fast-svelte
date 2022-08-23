@@ -5,8 +5,10 @@ from starlette.responses import RedirectResponse
 app = FastAPI()
 
 # https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/
-app.mount("/front", StaticFiles(directory="front/public", html=True), name="front")
-app.mount("/build", StaticFiles(directory="front/public/build"), name="build")
+app.mount("/svelte", StaticFiles(directory="svelte/public", html=True), name="svelte")
+app.mount(
+    "/built-svelte", StaticFiles(directory="svelte/public/build"), name="built-svelte"
+)
 
 
 @app.get("/toto")
@@ -15,5 +17,5 @@ async def root():
 
 
 @app.get("/")
-async def front():
-    return RedirectResponse(url="front")
+async def svelte():
+    return RedirectResponse(url="svelte")

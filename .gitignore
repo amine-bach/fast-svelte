@@ -1,6 +1,7 @@
-install_reminder
-resume_install_alwaysdata.txt
 test.py
+reminder_install.md
+
+## ======================================
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

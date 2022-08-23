@@ -4,6 +4,7 @@ from starlette.responses import RedirectResponse
 
 app = FastAPI()
 
+# https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/
 app.mount("/front", StaticFiles(directory="front/public", html=True), name="front")
 app.mount("/build", StaticFiles(directory="front/public/build"), name="build")
 

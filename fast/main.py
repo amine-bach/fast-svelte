@@ -16,6 +16,6 @@ async def root():
     return {"message": "ok"}
 
 
-@app.get("/")
-async def svelte():
-    return RedirectResponse(url="svelte")
+# @app.get("/")
+# async def svelte():
+#     return RedirectResponse(url="svelte")
